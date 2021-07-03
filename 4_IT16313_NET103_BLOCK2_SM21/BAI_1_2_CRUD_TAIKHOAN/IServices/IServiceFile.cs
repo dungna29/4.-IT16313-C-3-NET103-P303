@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace BAI_1_2_CRUD_TAIKHOAN.IServices
 {
-    interface IServiceFile
+   public interface IServiceFile
     {
-        
-   
+        //1. Lưu File
+        string saveFile<T>(string path,T lstobj);
+        //2. Đọc File
+        List<T> openFile<T>(string path);
     }
 }
