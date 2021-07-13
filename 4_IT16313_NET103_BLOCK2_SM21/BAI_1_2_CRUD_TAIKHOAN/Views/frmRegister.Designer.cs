@@ -30,6 +30,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_TaoTaiKhoan = new System.Windows.Forms.Button();
             this.cmbNamSinh = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.rbtnNu = new System.Windows.Forms.RadioButton();
@@ -40,12 +41,12 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.label2 = new System.Windows.Forms.Label();
             this.txtAcc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_TaoTaiKhoan = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.groupBox1.Controls.Add(this.btn_TaoTaiKhoan);
             this.groupBox1.Controls.Add(this.cmbNamSinh);
             this.groupBox1.Controls.Add(this.label5);
@@ -57,20 +58,32 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtAcc);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(15, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox1.Size = new System.Drawing.Size(638, 276);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo tài khoản";
             // 
+            // btn_TaoTaiKhoan
+            // 
+            this.btn_TaoTaiKhoan.Location = new System.Drawing.Point(196, 225);
+            this.btn_TaoTaiKhoan.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_TaoTaiKhoan.Name = "btn_TaoTaiKhoan";
+            this.btn_TaoTaiKhoan.Size = new System.Drawing.Size(220, 44);
+            this.btn_TaoTaiKhoan.TabIndex = 14;
+            this.btn_TaoTaiKhoan.Text = "Tạo tài khoản";
+            this.btn_TaoTaiKhoan.UseVisualStyleBackColor = true;
+            this.btn_TaoTaiKhoan.Click += new System.EventHandler(this.btn_TaoTaiKhoan_Click);
+            // 
             // cmbNamSinh
             // 
             this.cmbNamSinh.FormattingEnabled = true;
             this.cmbNamSinh.Location = new System.Drawing.Point(152, 180);
-            this.cmbNamSinh.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmbNamSinh.Margin = new System.Windows.Forms.Padding(6);
             this.cmbNamSinh.Name = "cmbNamSinh";
             this.cmbNamSinh.Size = new System.Drawing.Size(264, 33);
             this.cmbNamSinh.TabIndex = 11;
@@ -90,9 +103,9 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             // 
             this.rbtnNu.AutoSize = true;
             this.rbtnNu.Location = new System.Drawing.Point(290, 135);
-            this.rbtnNu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rbtnNu.Margin = new System.Windows.Forms.Padding(6);
             this.rbtnNu.Name = "rbtnNu";
-            this.rbtnNu.Size = new System.Drawing.Size(57, 29);
+            this.rbtnNu.Size = new System.Drawing.Size(59, 29);
             this.rbtnNu.TabIndex = 9;
             this.rbtnNu.TabStop = true;
             this.rbtnNu.Text = "Nữ";
@@ -102,9 +115,9 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             // 
             this.rbtnNam.AutoSize = true;
             this.rbtnNam.Location = new System.Drawing.Point(154, 135);
-            this.rbtnNam.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rbtnNam.Margin = new System.Windows.Forms.Padding(6);
             this.rbtnNam.Name = "rbtnNam";
-            this.rbtnNam.Size = new System.Drawing.Size(74, 29);
+            this.rbtnNam.Size = new System.Drawing.Size(77, 29);
             this.rbtnNam.TabIndex = 8;
             this.rbtnNam.TabStop = true;
             this.rbtnNam.Text = "Nam";
@@ -114,7 +127,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             // 
             this.btnTuSinhMk.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTuSinhMk.Location = new System.Drawing.Point(432, 92);
-            this.btnTuSinhMk.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnTuSinhMk.Margin = new System.Windows.Forms.Padding(6);
             this.btnTuSinhMk.Name = "btnTuSinhMk";
             this.btnTuSinhMk.Size = new System.Drawing.Size(186, 31);
             this.btnTuSinhMk.TabIndex = 3;
@@ -135,7 +148,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(152, 92);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(6);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(264, 31);
             this.txtPass.TabIndex = 4;
@@ -154,7 +167,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             // txtAcc
             // 
             this.txtAcc.Location = new System.Drawing.Point(152, 49);
-            this.txtAcc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAcc.Margin = new System.Windows.Forms.Padding(6);
             this.txtAcc.Name = "txtAcc";
             this.txtAcc.Size = new System.Drawing.Size(264, 31);
             this.txtAcc.TabIndex = 4;
@@ -170,16 +183,6 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.label1.TabIndex = 5;
             this.label1.Text = "Tài khoản: ";
             // 
-            // btn_TaoTaiKhoan
-            // 
-            this.btn_TaoTaiKhoan.Location = new System.Drawing.Point(196, 225);
-            this.btn_TaoTaiKhoan.Margin = new System.Windows.Forms.Padding(6);
-            this.btn_TaoTaiKhoan.Name = "btn_TaoTaiKhoan";
-            this.btn_TaoTaiKhoan.Size = new System.Drawing.Size(220, 44);
-            this.btn_TaoTaiKhoan.TabIndex = 14;
-            this.btn_TaoTaiKhoan.Text = "Tạo tài khoản";
-            this.btn_TaoTaiKhoan.UseVisualStyleBackColor = true;
-            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -187,7 +190,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.ClientSize = new System.Drawing.Size(667, 300);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmRegister";
             this.Text = "frmRegister";
             this.groupBox1.ResumeLayout(false);
