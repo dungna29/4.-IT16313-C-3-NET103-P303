@@ -52,11 +52,17 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
+            if (_iServiceAccount.getLstAccounts() == null)
+            {
+                MessageBox.Show("File data rỗng", "Thông báo");
+                return;
+            }
             if (_iServiceAccount.getLstAccounts().Any(c=>c.Acc == txt_Acc.Text && c.Pass == txt_Pass.Text))
             {
                 this.Hide();
                 MessageBox.Show("Đăng nhập thành công", "Thông báo");
                 frmMain frmMain = new frmMain();
+                frmMain.SenderDataFromLogin(_filePath,txt_Acc);//Truyền data từ Login lên Main
                 frmMain.Show();
             }
         }

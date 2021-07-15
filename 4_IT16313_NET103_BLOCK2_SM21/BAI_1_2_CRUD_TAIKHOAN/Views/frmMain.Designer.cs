@@ -31,7 +31,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lưuFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mn_LuuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.đọcFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátChươngTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,7 +80,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             // hệThốngToolStripMenuItem
             // 
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lưuFileToolStripMenuItem,
+            this.mn_LuuFile,
             this.đọcFileToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem,
             this.thoátChươngTrìnhToolStripMenuItem});
@@ -89,11 +89,12 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(108, 29);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
-            // lưuFileToolStripMenuItem
+            // mn_LuuFile
             // 
-            this.lưuFileToolStripMenuItem.Name = "lưuFileToolStripMenuItem";
-            this.lưuFileToolStripMenuItem.Size = new System.Drawing.Size(257, 30);
-            this.lưuFileToolStripMenuItem.Text = "Lưu File";
+            this.mn_LuuFile.Name = "mn_LuuFile";
+            this.mn_LuuFile.Size = new System.Drawing.Size(257, 30);
+            this.mn_LuuFile.Text = "Lưu File";
+            this.mn_LuuFile.Click += new System.EventHandler(this.mn_LuuFile_Click);
             // 
             // đọcFileToolStripMenuItem
             // 
@@ -117,7 +118,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             // 
             this.lbl_AccLogin.AutoSize = true;
             this.lbl_AccLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AccLogin.Location = new System.Drawing.Point(620, 9);
+            this.lbl_AccLogin.Location = new System.Drawing.Point(560, 9);
             this.lbl_AccLogin.Name = "lbl_AccLogin";
             this.lbl_AccLogin.Size = new System.Drawing.Size(72, 16);
             this.lbl_AccLogin.TabIndex = 20;
@@ -218,6 +219,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.btn_Add.TabIndex = 12;
             this.btn_Add.Text = "Thêm";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // groupBox1
             // 
@@ -300,6 +302,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.cbxKhongHoatDong.TabIndex = 7;
             this.cbxKhongHoatDong.Text = "Không hoạt động";
             this.cbxKhongHoatDong.UseVisualStyleBackColor = true;
+            this.cbxKhongHoatDong.CheckedChanged += new System.EventHandler(this.cbxKhongHoatDong_CheckedChanged);
             // 
             // cbxHoatDong
             // 
@@ -310,6 +313,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.cbxHoatDong.TabIndex = 6;
             this.cbxHoatDong.Text = "Hoạt động";
             this.cbxHoatDong.UseVisualStyleBackColor = true;
+            this.cbxHoatDong.CheckedChanged += new System.EventHandler(this.cbxHoatDong_CheckedChanged);
             // 
             // label4
             // 
@@ -376,7 +380,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.menuStrip1.ResumeLayout(false);
@@ -396,7 +400,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lưuFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mn_LuuFile;
         private System.Windows.Forms.ToolStripMenuItem đọcFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátChươngTrìnhToolStripMenuItem;
