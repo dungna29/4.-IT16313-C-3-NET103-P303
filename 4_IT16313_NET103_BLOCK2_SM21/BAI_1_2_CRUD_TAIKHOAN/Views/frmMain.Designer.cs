@@ -142,6 +142,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(134, 31);
             this.txtTimKiem.TabIndex = 12;
+            this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // label6
             // 
@@ -155,6 +156,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             // 
             // dgrid_Account
             // 
+            this.dgrid_Account.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgrid_Account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrid_Account.Location = new System.Drawing.Point(7, 70);
             this.dgrid_Account.MultiSelect = false;
@@ -162,6 +164,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.dgrid_Account.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrid_Account.Size = new System.Drawing.Size(763, 207);
             this.dgrid_Account.TabIndex = 0;
+            this.dgrid_Account.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_Account_CellClick);
             // 
             // groupBox2
             // 
@@ -186,6 +189,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.btn_Clear.TabIndex = 12;
             this.btn_Clear.Text = "Clear";
             this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // btn_Xoa
             // 
@@ -197,6 +201,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.btn_Xoa.TabIndex = 12;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Sua
             // 
@@ -208,6 +213,7 @@ namespace BAI_1_2_CRUD_TAIKHOAN.Views
             this.btn_Sua.TabIndex = 12;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Add
             // 
