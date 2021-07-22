@@ -16,7 +16,7 @@ namespace BAI_1_3_ADO.NET
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new _2_MainAccount_ADO());
         }
     }
 }

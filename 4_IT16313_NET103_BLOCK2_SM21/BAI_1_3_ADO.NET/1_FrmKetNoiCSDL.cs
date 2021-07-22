@@ -38,6 +38,7 @@ namespace BAI_1_3_ADO.NET
             data.Fill(table);//Đổ dữ liệu vào Table
             dataGridView1.DataSource = table;
             //5. Sau khi thực hiện xong hành động thì đóng kết nối
+            _con.Close();
         }
     }
 }

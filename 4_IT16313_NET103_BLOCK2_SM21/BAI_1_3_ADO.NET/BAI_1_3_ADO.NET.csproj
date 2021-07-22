@@ -52,10 +52,21 @@
     <Compile Include="1_FrmKetNoiCSDL.Designer.cs">
       <DependentUpon>1_FrmKetNoiCSDL.cs</DependentUpon>
     </Compile>
+    <Compile Include="2_MainAccount_ADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_MainAccount_ADO.Designer.cs">
+      <DependentUpon>2_MainAccount_ADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceAccount.cs" />
     <EmbeddedResource Include="1_FrmKetNoiCSDL.resx">
       <DependentUpon>1_FrmKetNoiCSDL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_MainAccount_ADO.resx">
+      <DependentUpon>2_MainAccount_ADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,5 +90,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="1. LyThuyet\1. SqlConnection.txt" />
+    <Content Include="1. LyThuyet\2. SqlCommand - DataAdapter.txt" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
