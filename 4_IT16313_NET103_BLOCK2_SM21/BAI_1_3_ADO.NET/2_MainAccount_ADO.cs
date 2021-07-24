@@ -104,5 +104,27 @@ namespace BAI_1_3_ADO.NET
             //Với cách này không nên can thiệp vào trong cột của bảng
             _con.Close();
         }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            _con = new SqlConnection(_sqlConnectionString);
+            _con.Open();
+            //Thực thi câu truy vấn thêm vào cơ sở dữ liệu
+            string query = @"INSERT INTO Accounts_ADO(Acc,Pass,Sex,YearofBirth,Status) VALUES(@Acc,@Pass,@Sex,@YearofBirth,@Status)";
+            _cmd = _serviceAccount.GetSqlCommand(query, _con);
+            _cmd.CommandText = query;
+            //_cmd.Parameters.AddWithValue("@Id", Guid.NewGuid());//Tự động tạo ra mã Guild tự động
+            _cmd.Parameters.AddWithValue("@Acc",txtAcc.Text);
+            _cmd.Parameters.AddWithValue("@Pass", txtPass.Text);
+            _cmd.Parameters.AddWithValue("@Sex",rbtnNam.Checked?1:0);
+            _cmd.Parameters.AddWithValue("@YearofBirth", cmbNamSinh.Text);
+            _cmd.Parameters.AddWithValue("@Status", cbxHoatDong.Checked);
+            _cmd.ExecuteNonQuery();//Thực thi câu truy vấn không trả về dữ liệu
+
+            _con.Close();
+            Cach1LoadData();
+            Cach2LoadData();
+            Cach4LoadData();
+        }
     }
 }
