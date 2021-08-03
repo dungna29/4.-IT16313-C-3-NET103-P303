@@ -22,5 +22,9 @@ namespace BAI_1_1_EFCORE_CODEBFIRST.DBContext_FPOLY
 
         //2. Khai báo các bảng
         public DbSet<Account> Accounts { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
     }
 }
