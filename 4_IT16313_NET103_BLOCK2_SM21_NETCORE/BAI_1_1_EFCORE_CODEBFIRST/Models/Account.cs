@@ -17,6 +17,7 @@ namespace BAI_1_1_EFCORE_CODEBFIRST.Models
         public string Acc { get; set; }
         [StringLength(28)]
         public string Pass { get; set; }
+        public int? Sex { get; set; }
         public bool? Status { get; set; }
         [ForeignKey("IdRole")]//Tên khóa phụ
         public Role Role { get; set; }

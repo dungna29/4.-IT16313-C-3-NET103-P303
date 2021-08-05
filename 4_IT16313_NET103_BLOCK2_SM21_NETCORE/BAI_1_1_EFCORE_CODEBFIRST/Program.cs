@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BAI_1_1_EFCORE_CODEFIRST;
 
 namespace BAI_1_1_EFCORE_CODEBFIRST
 {

@@ -15,5 +15,8 @@ namespace BAI_1_1_EFCORE_CODEBFIRST.Models
         public Guid Id { get; set; }
         [StringLength(99)]//Độ dài của chuỗi trong CSDL
         public string Name { get; set; }
+        public int? Quantity { get; set; }
+        public double? Price { get; set; }
+        public bool? Status { get; set; }
     }
 }
