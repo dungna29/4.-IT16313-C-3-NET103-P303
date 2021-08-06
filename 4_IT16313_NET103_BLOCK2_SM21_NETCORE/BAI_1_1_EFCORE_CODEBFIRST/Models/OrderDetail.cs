@@ -6,17 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BAI_1_1_EFCORE_CODEBFIRST.Models
+namespace BAI_1_1_EFCORE_CODEFIRST.Models
 {
     [Table("OrderDetails")]//Đặt tên bảng
     public class OrderDetail
     {
-        [Key]//Khai báo khóa chính cho bảng
+        [Key]//Chỉ định dưới nó sẽ là khóa chính
         public Guid Id { get; set; }
-        [ForeignKey("IdProduct")]//Tên khóa phụ
+
+        [ForeignKey("ProductId")]//Tạo tên cột khóa phụ
         public Product Product { get; set; }
-        [ForeignKey("IdOrder")]//Tên khóa phụ
+
+        [ForeignKey("OrderId")]//Tạo tên cột khóa phụ
         public Order Order { get; set; }
-        public int Quantity { get; set; }
+        public int? Quantity { get; set; }
+        public double? Price { get; set; }
     }
 }
